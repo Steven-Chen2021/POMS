@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Orders</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <div id="app">
+    <table border="1">
+      <thead>
+        <tr>
+          <th>PO number</th>
+          <th>Order QTY</th>
+          <th>Ship QTY</th>
+          <th>Shipper</th>
+          <th>Consignee</th>
+          <th>From</th>
+          <th>To</th>
+          <th>House no</th>
+          <th>Shipway</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="order in orders" :key="order.poNumber">
+          <td>{{ order.poNumber }}</td>
+          <td>{{ order.orderQty }}</td>
+          <td>{{ order.shipQty }}</td>
+          <td>{{ order.shipper }}</td>
+          <td>{{ order.consignee }}</td>
+          <td>{{ order.from }}</td>
+          <td>{{ order.to }}</td>
+          <td>{{ order.houseNo }}</td>
+          <td>{{ order.shipway }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
